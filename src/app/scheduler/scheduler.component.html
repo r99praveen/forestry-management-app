@@ -1,0 +1,86 @@
+
+
+<div class='card'>
+    <div class='card-header'>
+        <h1>Scheduler page</h1>
+    </div>
+    <h3>Orders page</h3>
+
+        
+          <div class='table-responsive'>
+            <table class='table'>
+              <thead>
+                <tr>
+                   
+                  <th>Id</th>
+                  <th>cartItem</th>
+                  <th>TotalPrice</th>
+                  <th>Quantity</th>
+                  <th>Name</th>
+                  <th>email</th>
+                  <!-- <th >quantity</th>
+                  <th>price</th> -->
+                  <th>Address</th>
+                  <th>contact</th>
+                  <th>town</th>
+                  <th>PostalCode</th>
+                  <th>
+                    <button class='btn btn-primary'>
+                       Order
+                    </button></th>
+                    <th>
+                      <button class='btn btn-primary'>
+                         Delete
+                      </button></th>
+                  </tr>
+                  
+                    <tr *ngFor="let sched of Scheduler">
+                      <td>{{sched.id}}</td>
+                      <td>{{sched.cartItem}}</td>
+                      <td>{{sched.name}}</td>
+                      <td>{{sched.totalPrice}}</td>
+                      <td>{{sched.email}}</td>
+                      <td>{{sched.address}}</td>
+                      <td>{{sched.name}}</td>
+                      <td>{{sched.name}}</td>
+  
+                </tr>
+              </thead>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <pre>
+    <h4>create a table with following fields
+    1.id  (from cart) 
+    2.totalprice (from cart)
+    3.quantity (from cart)
+    4.Name(from shipping info)
+    5.email(from shipping info)
+    6.address(from shipping info)
+    7.contact(from shipping info)
+    8.town(from shipping info)
+    9.postal code(from shipping info)
+    10.move to shipping button
+    11.Delete Button to delete the existing order.</h4>
+    </pre> -->
