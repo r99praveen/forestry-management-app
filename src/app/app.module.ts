@@ -13,6 +13,8 @@ import { SchedulerComponent } from './scheduler/scheduler.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { OrderComponent } from './order/order.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { UpdateProductComponent } from './update-product/update-product.componen
     ThanksMessageComponent,
     MaintainProductsComponent,
     SchedulerComponent,
+    AddCustomerComponent,
     AddProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    OrderComponent
 
   ],
   imports: [

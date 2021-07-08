@@ -1,8 +1,8 @@
 export class customerInfo {
-    id:number=0;
+    id:number;
     name: string | undefined;
     email: string | undefined;
-    contact: number=0;
+    contact: number;
     address: string | undefined;
     town : string | undefined;
     postalCode : number=0;

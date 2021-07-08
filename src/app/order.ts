@@ -1,16 +1,15 @@
-export class scheduler {
+export class Order {
+
     id:number;
-    name: string | undefined;
     cartItem : string | undefined;
-    description: string | undefined;
-    totalPrice: string | undefined;
     quantity: string | undefined;
+    totalPrice: string | undefined;
+    name: string | undefined;
     email: string | undefined;
     address : string | undefined;
-    contact: number=0;
     town : string | undefined;
     postalCode : string | undefined;
-    truckNumber : number=0;
-
+    contact: number=0;
+  
   }
   
