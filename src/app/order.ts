@@ -10,6 +10,7 @@ export class Order {
     town : string | undefined;
     postalCode : string | undefined;
     contact: number=0;
+    truckNumber: number;
   
   }
   

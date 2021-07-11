@@ -13,7 +13,7 @@ export class SchedulerComponent implements OnInit {
    id : number | undefined ;
 
    Scheduler : scheduler = new scheduler();
-  //  @Input()
+ 
   constructor(private sche : schedulerService , private router: Router , private route : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -25,10 +25,12 @@ export class SchedulerComponent implements OnInit {
     
   }
 
-  // addToScheduler(){
+  addToSchedulers(){
 
-  //   this.sche.addScheduler(this.Scheduler).subscribe(data => {this.router.navigate(['/order'])},
-  //    error => console.log(error) )
+    this.sche.addSchedulers(this.Scheduler).subscribe(data => {this.router.navigate(['/order-summary'])},
+     error => console.log(error) )
 
-  // }
+    
+
+  }
 }

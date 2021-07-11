@@ -36,11 +36,12 @@ export class CustomerInfoComponent implements OnInit {
 
   addToOrder(){
 
-    this.ord.addOrder(this.order).subscribe(data => {this.router.navigate(['/order'])},
+    this.ord.addOrder(this.order).subscribe(data => {this.router.navigate(['/thanks-message'])},
      error => console.log(error) ),
-     this.sched.addScheduler(this.order).subscribe(data => {this.router.navigate(['/order'])}, error => console.log(error))
+     this.sched.addScheduler(this.order).subscribe(data => {this.router.navigate(['/orders'])}, error => console.log(error))
 
   }
+  
 
   // // placeOrder(){
   // //   console.log('ordered placed');

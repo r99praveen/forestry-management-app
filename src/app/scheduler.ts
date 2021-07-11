@@ -7,10 +7,10 @@ export class scheduler {
     quantity: string | undefined;
     email: string | undefined;
     address : string | undefined;
-    contact: number=0;
+    contact: number;
     town : string | undefined;
     postalCode : string | undefined;
-    truckNumber : number=0;
+    truckNumber : number;
 
   }
   

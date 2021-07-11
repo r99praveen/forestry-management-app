@@ -25,7 +25,7 @@ DeleteOrder(id: number){
 }
 
 schedule(id : number){
-  this.router.navigate([`/scheduler` , id])
+  this.router.navigate(['/scheduler' , id])
 }
 
 

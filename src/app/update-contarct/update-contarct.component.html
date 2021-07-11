@@ -1,0 +1,54 @@
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/scheduler']" style="font-weight: 700;">
+        <i>Forestry Management App</i>
+      </a>
+    </div>
+  </nav><br>
+  
+  
+  
+  
+<body>
+    <h2 style="text-align: center;" id="font"><i>UPDATE CONTRACT</i></h2>
+    <div class="container">
+      <form #addForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Customer Name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="contract.customer_name" name="name" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" class="form-control" id="description" [(ngModel)]="contract.product_name" name="productname"
+            required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Quantity of Product</label>
+          <input type="number" class="form-control" id="price" [(ngModel)]="contract.quantity" name="quantity" required>
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label>Value of the Contract</label>
+            <input type="number" class="form-control" id="address" [(ngModel)]="contract.value" name="value" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label>Customer Number</label>
+            <input type="number" class="form-control" id="address" [(ngModel)]="contract.customer_number" name="customerNumber" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label>Customer Location</label>
+            <input type="text" class="form-control" id="address" [(ngModel)]="contract.customer_location" name="customerLocation" required>
+          </div>
+          <br>
+
+       
+        <button [disabled]="addForm.invalid" class="btn btn-outline-success" type="submit">Update</button>
+      </form>
+    </div>
+  </body>

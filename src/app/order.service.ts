@@ -26,5 +26,8 @@ deleteOrder(id : number) : Observable<any[]>{
   return this.httpClient.delete<any[]>(`${this.baseURL}` + `delete/${id}`)
 }
 
+placeOrder(order: Order): Observable<Object> {
+  return this.httpClient.post(`${this.baseURL}` + 'save', order);
+}
 
 }

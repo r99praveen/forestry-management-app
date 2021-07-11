@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Cart } from '../cart';
 import { CartService } from '../cart.service';
 import { Order } from '../order';
 import { OrderService } from '../order.service';
+import { schedulerService } from '../scheduler/schedulerService';
 
 @Component({
   selector: 'app-cart',
@@ -26,7 +28,7 @@ export class CartComponent implements OnInit {
 
 
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService ,private ord : OrderService , private sched : schedulerService , private router: Router , private route : ActivatedRoute ) { }
 
   ngOnInit(): void {
     this.getCartItems();
@@ -86,7 +88,18 @@ export class CartComponent implements OnInit {
 
   }
 
+  // addToOrder(){
 
+  //   this.ord.addOrder(this.order).subscribe(data => {this.router.navigate(['/order'])},
+  //    error => console.log(error) ),
+  //    this.sched.addScheduler(this.order).subscribe(data => {this.router.navigate(['/order'])}, error => console.log(error))
+  
+  // }
+  
+
+  onSubmit(){
+
+  }
 
 
 }

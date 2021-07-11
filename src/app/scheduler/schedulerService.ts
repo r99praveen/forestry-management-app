@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Scheduler } from 'rxjs';
 import { scheduler } from '../scheduler';
 import { Order } from '../order';
 
@@ -11,7 +11,7 @@ import { Order } from '../order';
 
 export class schedulerService {
 
-//   private baseURL = 'http://localhost:8085/orders/';
+  private baseURL = 'http://localhost:8085/scheduler/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -25,10 +25,21 @@ export class schedulerService {
 
   addScheduler(order : Order) : Observable<any>{
     return this.httpClient.post<any>(`http://localhost:8085/scheduler/save` , order )
-
+ 
   
   }
 
+  addSchedulers(Scheduler : scheduler) : Observable<any>{
+    return this.httpClient.post<any>(`http://localhost:8085/scheduler/save` , Scheduler )
+ 
+  
+  }
+  
+  listOfOrders(): Observable<scheduler[]> {
+    return this.httpClient.get<scheduler[]>(`${this.baseURL}` + `getAll`);
+  }
+
+ 
 
   
 

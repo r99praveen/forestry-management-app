@@ -9,7 +9,7 @@
   <br>
   
   <div class="container">
-    <h2> YOUR CART <i class="bi bi-cart-fill"></i> </h2><br>
+    <h4> YOUR CART <i class="bi bi-cart-fill"></i> </h4><br>
   
   
     <table class="table">
@@ -19,6 +19,9 @@
           <th>Price</th>
           <th>Quantity</th>
           <th>Action</th>
+          <h4>
+            TOTAL PRICE : {{totalPrice}}
+          </h4>
         </tr>
       </thead>
   
@@ -33,6 +36,8 @@
             </form>
           </td>
           <td> <button class="btn btn-danger" (click)="deleteCartItem(cart.id)">REMOVE ITEM</button></td>
+          
+          
         </tr>
   
       </tbody>
@@ -41,11 +46,58 @@
     <br>
     <br>
     <br>
-  
-    <h3>
-      TOTAL PRICE : {{totalPrice}}
-    </h3>
+
     <table class="table">
-      <button (click)="placeOrder(order)" class="btn btn-primary" [routerLink]="['/customer-info']" role="button">PROCEED TO CHECKOUT</button>
+      <button (click)="placeOrder(order)" class="btn btn-primary" [routerLink]="['/customer-info']" role="button">PLACE ORDER</button>
     </table>
-  </div>
+
+    <!-- <form #addForm="ngForm" (ngSubmit)="onSubmit() ">
+      <div class="form-group "> <br>
+          <label> <b>Name <sup style="color: red;">*</sup></b> </label>
+          <input type="text " class="form-control " id="name" [(ngModel)]="order.name " name="name " required>
+      </div> <br>
+
+      <div class="form-group ">
+          <label> <b>Email <sup style="color: red;">*</sup></b></label>
+          <input type="text " class="form-control " id="email" [(ngModel)]="order.email " name="email " required>
+      </div> <br>
+
+      <div class="form-group ">
+          <label><b>Address <sup style="color: red;">*</sup></b></label>
+          <input type="text " class="form-control " id="address" [(ngModel)]="order.address " name="address " required>
+      </div> <br>
+
+
+      <div class="form-group ">
+          <label> <b>Town <sup style="color: red;">*</sup></b></label>
+          <input type="text " class="form-control " id="town" [(ngModel)]="order.town " name="town " required>
+      </div> <br>
+
+
+      <div class="form-group ">
+          <label> <b>Postal Code <sup style="color: red;">*</sup></b></label>
+          <input type="text " class="form-control " id="postalcode" [(ngModel)]="order.postalCode " name="postalcode " required>
+      </div> <br>
+
+      <div class="form-group ">
+          <label> <b>Contact <sup style="color: red;">*</sup></b></label>
+          <input type="number " class="form-control " id="contact" [(ngModel)]="order.contact " name="contact " required>
+      </div> <br>
+
+
+      <button [disabled]="addForm.invalid" class="btn-success" type="submit" (click)="addToOrder()">PLACE ORDER</button><br /><br />
+
+      <button [routerLink]="[ '/thanks-message']" class="btn btn-success " type="submit ">Submit</button>
+
+
+  </form> <br>
+
+  <p style="color: red;"><i> All the fields with (*) are MANDATORY </i></p>
+ -->
+
+
+
+    <!-- <table class="table">
+      <button (click)="placeOrder(order)" class="btn btn-primary" [routerLink]="['/order']" role="button">PLACE ORDER</button>
+    </table> -->
+  <!-- </div> -->
